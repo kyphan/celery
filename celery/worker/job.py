@@ -359,8 +359,8 @@ class Request(object):
                     self.store_errors:
                 self.task.backend.mark_as_failure(self.id, exc_info.exception)
             # (acks_late) acknowledge after result stored.
-            if self.task.acks_late:
-                self.acknowledge()
+            # if self.task.acks_late:
+            #     self.acknowledge()
 
         self._log_error(exc_info)
 
